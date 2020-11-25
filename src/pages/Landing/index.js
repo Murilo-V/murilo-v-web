@@ -1,12 +1,21 @@
 import React from 'react';
-import introVector from '../../assets/intro-vector.svg'
+import SvgIntro from '../../components/SvgIntro';
+import SvgMaskedIntro from '../../components/SvgMaskedIntro';
 import { Container } from './styles';
 
 const Landing = () => {
   return (
     <Container>
-      <img src={introVector} alt="Vector Background" />
+      <div className="svgContainer">
+        <SvgIntro id="svgIntro" />
+      </div>  
+
+      
+
+      <span className="maskedTitle">murilo v. <p>design gráfico e programação</p></span>
+      <span className="unmaskedTitle">murilo v. <p>design gráfico e programação</p></span>
     </Container>
+      
   );
 };
 

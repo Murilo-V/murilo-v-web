@@ -10,6 +10,11 @@
     font-family: 'Epilogue', sans-serif;
 }
 
+body {
+    background-color: #232323;
+
+}
+
 img {
     user-select: none;
   -moz-user-select: none;

@@ -1,5 +1,6 @@
-const { default: Header } = require("./components/Header");
-const { default: Landing } = require("./pages/Landing");
+import React from 'react';
+import Header from './components/Header';
+import Landing from './pages/Landing'
 
 function App() {
   return (
