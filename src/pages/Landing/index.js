@@ -7,13 +7,16 @@ const Landing = () => {
   return (
     <Container>
       <div className="svgContainer">
-        <SvgIntro id="svgIntro" />
-      </div>  
+        <SvgIntro />
+      </div>
 
+      <div className="svgMaskedContainer">
+        <SvgMaskedIntro />
+      </div>
       
-
-      <span className="maskedTitle">murilo v. <p>design gráfico e programação</p></span>
-      <span className="unmaskedTitle">murilo v. <p>design gráfico e programação</p></span>
+      <div className="waveBottom"></div>  
+      <span className="title">murilo v.</span>
+      <p>design gráfico e programação</p>
     </Container>
       
   );

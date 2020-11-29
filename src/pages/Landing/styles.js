@@ -1,62 +1,91 @@
 import styled from 'styled-components';
-import svgIntroMasked from '../../assets/masked-intro-vector.svg'
-
 
 export const Container = styled.div `
-     .svgContainer {
-            position: fixed;
-            z-index: 1;
-        } 
-
-        .maskedTitle {
-            color: #232323;
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            font-size: 160pt;
-            display: flex;
-            font-weight: 700;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            mask-image: url(${svgIntroMasked});
-            mask-position: fixed;
-            mask-repeat: no-repeat;
-            mask-size: 100%;
-            z-index: 2;
-            text-shadow: 15.2156px 15.2156px 11.4117px rgba(18, 18, 18, 0.25);
-
-            p {
-                font-size: 30pt;
-                margin: 0;
-                padding: 0;
-                text-decoration-line: underline;
-                font-weight: 500;
-            }
+    @media screen and (max-width:920px) {
+        .title {
+            font-size: 120pt !important;
         }
 
-        .unmaskedTitle {
-            top: 0;
+        p {
+            padding-top: 58vh !important;
+        }
+    }
+
+    @media screen and (max-width:690px) {
+        .title {
+            font-size: 80pt !important;
+        }
+        p {
+                font-size: 20pt !important;
+                padding-top: 56vh !important;
+            }
+    }
+
+    @media screen and (max-width:470px) {
+        .title {
+            font-size: 50pt !important;   
+        }
+        p {
+                font-size: 16pt !important;
+                padding-top: 54vh !important;
+            }
+    }
+
+    @media screen and (max-width:340px) {
+        .title {
+            font-size: 34pt !important;
+        }
+        p {
+                font-size: 12pt !important;
+                padding-top: 52vh !important;
+            }
+    }
+
+     .svgContainer, .svgMaskedContainer {
+            position: fixed;
+            z-index: 1;
+            width: 100vw;
+            height: 100vh;
+        } 
+
+        .title {
+            font-size: 160pt;
+            font-weight: 700;
+
+        }
+
+        span {
             color: #3F8D1A;
             width: 100vw;
             height: 100vh;
             position: fixed;
-            font-size: 160pt;
             display: flex;
-            font-weight: 700;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: column;
-            text-shadow: 15.2156px 15.2156px 11.4117px rgba(18, 18, 18, 0.25);
+            z-index: 0;
+        }
 
-            p {
+        p {
                 font-size: 30pt;
                 margin: 0;
                 padding: 0;
                 text-decoration-line: underline;
+                text-align: center;
                 font-weight: 500;
-                color: #D5DBD5;
-
+                color: #232323;
+                padding-top: 62vh;
+                position: fixed;
+                z-index: 3;
+                width: 100vw;
+                height: 100vh;
             }
-        }
+
+        .waveBottom {
+                height: 45vh;
+                width: 100vw;
+                background-color: #3F8D1A;
+                position: fixed;
+                bottom: 0;
+            }
 `;
