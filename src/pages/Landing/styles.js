@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
-    @media screen and (max-width:920px) {
+    @media screen and (max-width:1100px) {
         .title {
             font-size: 120pt !important;
-        }
-
-        p {
-            padding-top: 58vh !important;
         }
     }
 
@@ -15,9 +11,8 @@ export const Container = styled.div `
         .title {
             font-size: 80pt !important;
         }
-        p {
+        .slogan {
                 font-size: 20pt !important;
-                padding-top: 56vh !important;
             }
     }
 
@@ -25,9 +20,9 @@ export const Container = styled.div `
         .title {
             font-size: 50pt !important;   
         }
-        p {
+        .slogan {
                 font-size: 16pt !important;
-                padding-top: 54vh !important;
+                margin-top: 14vh !important;
             }
     }
 
@@ -35,9 +30,8 @@ export const Container = styled.div `
         .title {
             font-size: 34pt !important;
         }
-        p {
+        .slogan {
                 font-size: 12pt !important;
-                padding-top: 52vh !important;
             }
     }
 
@@ -51,38 +45,12 @@ export const Container = styled.div `
         .title {
             font-size: 160pt;
             font-weight: 700;
+            
 
         }
-
-        span {
-            color: #3F8D1A;
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-direction: column;
-            z-index: 0;
-        }
-
-        p {
-                font-size: 30pt;
-                margin: 0;
-                padding: 0;
-                text-decoration-line: underline;
-                text-align: center;
-                font-weight: 500;
-                color: #232323;
-                padding-top: 62vh;
-                position: fixed;
-                z-index: 3;
-                width: 100vw;
-                height: 100vh;
-            }
 
         .waveBottom {
-                height: 45vh;
+                height: 30vh;
                 width: 100vw;
                 background-color: #3F8D1A;
                 position: fixed;

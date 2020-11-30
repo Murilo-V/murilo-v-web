@@ -43,16 +43,16 @@
 </body>
 <script>
   var container = document.querySelector('.svgContainer');
+  var maskedContainer = document.querySelector('.svgMaskedContainer');
   var width = container.offsetWidth;
   var height = container.offsetHeight;
   var wave = document.getElementById('wave');
   var maskedWave = document.getElementById('maskedWavePath');
   var waveWidth = container.offsetWidth; // Wave SVG width (usually container width)
-  var waveHeight = container.offsetHeight / 2.1; // Position from the top of container
-  var waveDelta = 14; // Wave amplitude
-  var speed = 0.2; // Wave animation speed
+  var waveHeight = container.offsetHeight / 2; // Position from the top of container
+  var waveDelta = 8; // Wave amplitude
+  var speed = 0.3; // Wave animation speed
   var wavePoints = 10; // How many point will be used to compute our wave
-
 
   function calculateWavePoints(factor) {
     var points = [];

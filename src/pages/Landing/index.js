@@ -1,4 +1,5 @@
 import React from 'react';
+import SloganText from '../../components/SloganText';
 import SvgIntro from '../../components/SvgIntro';
 import SvgMaskedIntro from '../../components/SvgMaskedIntro';
 import { Container } from './styles';
@@ -15,8 +16,7 @@ const Landing = () => {
       </div>
       
       <div className="waveBottom"></div>  
-      <span className="title">murilo v.</span>
-      <p>design gráfico e programação</p>
+      <SloganText />
     </Container>
       
   );
