@@ -13,6 +13,7 @@ export const Container = styled.div `
         }
         .slogan {
                 font-size: 20pt !important;
+                margin-top: 90px !important;
             }
     }
 
@@ -44,9 +45,8 @@ export const Container = styled.div `
 
         .title {
             font-size: 160pt;
-            font-weight: 700;
-            
-
+            font-weight: 600;
+            text-shadow: 4px 4px 25px rgba(18, 18, 18, 0.25);
         }
 
         .waveBottom {

@@ -41,18 +41,19 @@ const letterVariants = {
       width={ "100%" }
       background={ "" }
       style={{
-        fontWeight: "500",
+        fontWeight: "400",
         letterSpacing: "-0.04em",
         fontSize: "30pt",
-        color: "#232323",
-        display: "flex", // Set the display value to flex
-        justifyContent: "center", // Center all children elements on the x axis
+        color: "#D5DBD5",
+        display: "flex",
+        justifyContent: "center", 
         alignItems: "center",
         position: "fixed",
         width: "100vw",
         height: "100vh",
         textDecoration: "underline",
-        zIndex: 7,
+        zIndex: 6,
+        textShadow: "5px 5px 12px rgba(18, 18, 18, 0.40)",
       }}
       variants={ containerVariants }
       initial={ "before" }
