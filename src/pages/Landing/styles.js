@@ -20,10 +20,11 @@ export const Container = styled.div `
     @media screen and (max-width:470px) {
         .title {
             font-size: 50pt !important;   
+            text-shadow: none !important;
         }
         .slogan {
                 font-size: 16pt !important;
-                margin-top: 14vh !important;
+                margin-top: 70px!important;
             }
     }
 
@@ -38,7 +39,7 @@ export const Container = styled.div `
 
      .svgContainer, .svgMaskedContainer {
             position: fixed;
-            z-index: 1;
+            z-index: -1;
             width: 100vw;
             height: 100vh;
         } 

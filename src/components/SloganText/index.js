@@ -52,7 +52,7 @@ const letterVariants = {
         width: "100vw",
         height: "100vh",
         textDecoration: "underline",
-        zIndex: 6,
+        zIndex: 0,
         textShadow: "5px 5px 12px rgba(18, 18, 18, 0.40)",
       }}
       variants={ containerVariants }

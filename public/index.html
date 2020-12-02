@@ -51,9 +51,20 @@
   var maskedWave = document.getElementById('maskedWavePath');
   var waveWidth = container.offsetWidth; // Wave SVG width (usually container width)
   var waveHeight = container.offsetHeight / 2; // Position from the top of container
-  var waveDelta = 10; // Wave amplitude
+  var waveDelta = 12; // Wave amplitude
   var speed = 0.3; // Wave animation speed
-  var wavePoints = 10; // How many point will be used to compute our wave
+  var wavePoints = 12; // How many point will be used to compute our wave
+
+  function removeWaveOnMobile(x) {
+  if (x.matches) { // If media query matches
+      wave.removeAttribute('d', buildPath(calculateWavePoints(factor)));
+      maskedWave.removeAttribute('d', buildPath(calculateWavePoints(factor))); 
+  } 
+}
+
+var x = window.matchMedia("(max-width: 470px)")
+removeWaveOnMobile(x) // Call listener function at run time
+x.addListener(removeWaveOnMobile)
 
   function calculateWavePoints(factor) {
     var points = [];

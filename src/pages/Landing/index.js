@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuIcon from '../../components/MenuIcon';
+import Menu from '../../components/Menu';
 import SloganText from '../../components/SloganText';
 import SvgIntro from '../../components/SvgIntro';
 import SvgMaskedIntro from '../../components/SvgMaskedIntro';
@@ -8,7 +8,7 @@ import { Container } from './styles';
 const Landing = () => {
   return (
     <Container>
-      <MenuIcon />
+      <Menu />
       <div className="svgContainer">
         <SvgIntro />
       </div>
