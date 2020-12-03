@@ -55,6 +55,7 @@ const letterVariants = {
         zIndex: 0,
         textShadow: "5px 5px 12px rgba(18, 18, 18, 0.40)",
       }}
+            
       variants={ containerVariants }
       initial={ "before" }
       animate={ "after" }

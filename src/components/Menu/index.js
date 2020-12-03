@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Container } from './styles';
 
 const variants = {
-  open: { opacity: 1, x: 0, display: 'block' },
-  closed: { opacity: 0, x: "-100%" },
+  open: { opacity: 1, x: 0, display: 'flex' },
+  closed: { opacity: 0, display: 'none' },
 }
 
 const Menu = () => {
