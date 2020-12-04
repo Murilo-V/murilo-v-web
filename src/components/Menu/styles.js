@@ -1,20 +1,36 @@
 import styled from 'styled-components';
 import SvgMenuCursor from '../../assets/menu-cursor.svg';
+import SvgLinkCursor from '../../assets/link-cursor.svg';
 import BackgroundMenu from '../../assets/background-menu.svg';
 
 export const Container = styled.div`
     @media screen and (max-width:690px) {
-        img {
+        .closeMenuIcon {
             margin-top: 20px !important;
             max-width: 30px !important;
             transform: rotate(-90deg) !important;
+        }
+
+        .nav-container {
+            flex-direction: column !important;
+            justify-content: center !important;
+
+            iframe {
+                max-width: 75vw !important;
+                margin-bottom: 50px !important;
+            }
+
+            a {
+                color: #232323 !important;
+                font-size: 30pt !important;
+            }
         }
     }
 
     z-index: 1;
     position: fixed;
 
-    img {
+    .closeMenuIcon {
         max-width: 40px;
         margin-top: 50vh;
         margin-left: 10px;
@@ -23,7 +39,7 @@ export const Container = styled.div`
         cursor: none;
     }
 
-    div {
+    .nav-container {
         background-image: url(${BackgroundMenu});
         background-repeat: no-repeat;
         background-size: cover;
@@ -34,10 +50,35 @@ export const Container = styled.div`
         height: 100vh !important;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         z-index: 2;
         position: fixed;
         cursor: url(${SvgMenuCursor}), default;
+
+        .items-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;  
+            a {
+                transition: 320ms;
+                text-decoration: none;
+                color: #D5DBD5;
+                font-weight: 500;
+                font-size: 50pt;
+            }
+
+            a:hover{
+                transform: scale(1.25);
+                cursor: url(${SvgLinkCursor}), default;
+                color: #3F8D1A;
+                font-weight: 600;
+            }
+
+            a + a { 
+                margin-top: 15px;
+            }
+        }
 
     }
 `;

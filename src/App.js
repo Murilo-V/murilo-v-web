@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Header';
-import Landing from './pages/Landing'
+import Routes from './routes';
 
 function App() {
   return (
     <div className="App">
      <Header />
-     <Landing />
+     <Routes />
     </div>
   );
 }
