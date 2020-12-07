@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SvgMenuIcon from '../../assets/menu-icon.svg';
 import SvgCloseMenuIcon from '../../assets/close-menu-icon.svg';
+import MP4MenuVideo from '../../assets/menu-video.mp4';
 import { motion } from 'framer-motion';
 import { Container } from './styles';
 import { Link } from 'react-router-dom';
@@ -40,7 +41,9 @@ const Menu = () => {
         animate={isOpen ? "open" : "closed"}
         variants={variants}>
           
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/cGTJQwHmGWc" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+          <video muted autoPlay loop>
+            <source src={MP4MenuVideo} type="video/mp4"/>
+          </video>
 
           <div className="items-container">
             <Link to="/projects" target="_blank" rel="noopener noreferrer">projetos</Link>

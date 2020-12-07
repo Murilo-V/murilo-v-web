@@ -14,15 +14,20 @@ export const Container = styled.div`
         .nav-container {
             flex-direction: column !important;
             justify-content: center !important;
+            background-position-x: left !important;
 
-            iframe {
-                max-width: 75vw !important;
-                margin-bottom: 50px !important;
+            video {
+                max-width: 55vw !important;
+                max-height: 75vw !important;
             }
 
             a {
                 color: #232323 !important;
                 font-size: 30pt !important;
+
+                &:hover{
+                color: #3F8D1A !important;
+                }
             }
         }
     }
@@ -54,6 +59,14 @@ export const Container = styled.div`
         z-index: 2;
         position: fixed;
         cursor: url(${SvgMenuCursor}), default;
+
+        video {
+            border-style: none;
+            outline: none;
+            width: 50%;
+            height: 100vh;
+            cursor: url(${SvgMenuCursor}), default;
+        }
 
         .items-container {
               display: flex;
