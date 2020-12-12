@@ -1,11 +1,12 @@
 import React from 'react';
+import Menu from '../../components/Menu';
 
 import { Container } from './styles';
 
 const Services = () => {
   return (
     <Container>
-      <h1>Services</h1>
+      <Menu/>
     </Container>
   );
 };

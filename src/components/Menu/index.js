@@ -46,6 +46,7 @@ const Menu = () => {
           </video>
 
           <div className="items-container">
+            <Link to="/" target="_blank" rel="noopener noreferrer">home</Link>
             <Link to="/projects" target="_blank" rel="noopener noreferrer">projetos</Link>
             <Link to="/services" target="_blank" rel="noopener noreferrer">serviços</Link>
             <Link to="/history" target="_blank" rel="noopener noreferrer">história</Link>

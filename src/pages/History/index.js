@@ -1,11 +1,12 @@
 import React from 'react';
+import Menu from '../../components/Menu';
 
 import { Container } from './styles';
 
 const History = () => {
   return (
     <Container>
-      <h1>History</h1>
+      <Menu/>
     </Container>
   );
 };

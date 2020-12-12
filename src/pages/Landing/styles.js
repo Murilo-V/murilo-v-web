@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import SvgDefaultCursor from '../../assets/default-cursor.svg'
 
 export const Container = styled.div `
     @media screen and (max-width:1100px) {

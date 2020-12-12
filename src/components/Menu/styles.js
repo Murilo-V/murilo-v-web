@@ -4,7 +4,7 @@ import SvgLinkCursor from '../../assets/link-cursor.svg';
 import BackgroundMenu from '../../assets/background-menu.svg';
 
 export const Container = styled.div`
-    @media screen and (max-width:690px) {
+    @media screen and (max-width:780px) {
         .closeMenuIcon {
             margin-top: 20px !important;
             max-width: 30px !important;
