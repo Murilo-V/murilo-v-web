@@ -88,15 +88,13 @@ export const Container = styled.div`
 
             &:hover {
                 transform: scale(1.05);
-            cursor: url(${SvgLinkCursor}), default;
-
+                cursor: url(${SvgLinkCursor}), default;
             }
 
             img {
                 width: 75%;
                 padding: 15px;
-            cursor: url(${SvgLinkCursor}), default;
-
+                cursor: url(${SvgLinkCursor}), default;
             }
         }
     }

@@ -7,6 +7,11 @@ const Services = () => {
   return (
     <Container>
       <Menu/>
+      <h1>serviços</h1>
+      
+      <div className="services-container">
+        <button>pedir orçamento</button>
+      </div>
     </Container>
   );
 };
