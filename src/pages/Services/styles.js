@@ -40,11 +40,12 @@ export const Container = styled.div`
             justify-content: center;
             cursor: url(${SvgMenuCursor}), default;
 
-            button {
+            a {
                 background: #232323;
                 border: 3px solid #3F8D1A;
                 box-sizing: border-box;
                 box-shadow: 0px 10px 17px rgba(0, 0, 0, 0.25);
+                text-decoration: none;
                 border-radius: 18px;
                 color: #D5DBD5;
                 font-weight: 300;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Menu from '../../components/Menu';
 
 import { Container } from './styles';
@@ -10,7 +11,7 @@ const Services = () => {
       <h1>serviços</h1>
       
       <div className="services-container">
-        <button>pedir orçamento</button>
+        <Link to="/services/budget" >pedir orçamento</Link>
       </div>
     </Container>
   );
