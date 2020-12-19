@@ -2,18 +2,31 @@ import React from 'react';
 import Menu from '../../../components/Menu';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+import { ThemeProvider } from '@material-ui/styles';
 import { Container } from './styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const Budget = () => {
+
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        light: '#232323',
+        main: '#232323',
+        dark: '#232323',
+        contrastText: '#232323',
+      },
+    },
+  });
 
   const currencies = [
     {
       value: 'WEB',
-      label: 'site',
+      label: 'Site',
     },
     {
       value: 'APP',
-      label: 'app',
+      label: 'Aplicativo',
     },
   ];
 
@@ -32,11 +45,17 @@ const Budget = () => {
          <h2>pedido de orçamento</h2>
          <h3>todos os campos são obrigatórios</h3>
 
-        <TextField label="nome" variant="outlined" />
-        <TextField label="e-mail" variant="outlined" />
+      <ThemeProvider theme={theme}>
+
+        <TextField id="txtNome" fullWidth size="small" label="Nome" variant="outlined" />
+
+        <TextField id="txtEmail" fullWidth type="email" size="small" label="E-mail" variant="outlined" />
+
         <TextField 
-          select 
-          label="preciso de um" 
+          select
+          fullWidth
+          size="small" 
+          label="Preciso de um" 
           value={currency} 
           onChange={handleChange}
           variant="outlined">
@@ -45,10 +64,13 @@ const Budget = () => {
               {option.label}
             </MenuItem>
           ))}
-          </TextField>
+        </TextField>
 
-        <TextField multiline label="digite sobre o projeto" variant="outlined" />
-       </form>
+        <TextField multiline size="small" fullWidth label="Digite sobre o projeto" variant="outlined" />
+      </ThemeProvider>
+
+      <button type="submit">enviar</button>
+      </form>
     </Container>
   );
 };

@@ -42,6 +42,8 @@ export const Container = styled.div`
             position: fixed;
             bottom: 0;
             display: flex;
+            align-items: center;
+            justify-content: space-between;
             flex-direction: column;
 
             h2 {
@@ -63,8 +65,23 @@ export const Container = styled.div`
                 margin-bottom: 45px;
             }
 
-                div {
-                    margin-bottom: 12px;
-                }
+            input, select, div, textarea {
+                color: #232323;
+            }
+
+            .MuiInputBase-root {
+                margin-bottom: 20px;
+            }
+
+            button {
+                background: #232323;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: 14pt;
+                width: 120px;
+                line-height: 37px;
+                color: #D5DBD5;
+                margin-bottom: 20px;
+            }
         }
 `;
