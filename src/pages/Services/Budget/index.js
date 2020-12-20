@@ -84,7 +84,7 @@ const Budget = () => {
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }))
     axios({
       method: 'POST',
-      url: 'https://formspree.io/f/mpzoowdr',
+      url: '',
       data: inputs,
     })
       .then((response) => {
