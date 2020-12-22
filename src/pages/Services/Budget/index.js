@@ -33,9 +33,17 @@ const Budget = () => {
 
   const [currency, setCurrency] = useState('WEB');
 
-  const handleChangeSelect = (event) => {
-    setCurrency(event.target.value);
-    handleOnChange(event);
+  const handleChangeSelect = (e) => {
+    setCurrency(e.target.value);
+    setInputs((prev) => ({
+      ...prev,
+      servico: e.target.value,
+    }))
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    })
   };
 
   const [status, setStatus] = useState({
@@ -46,7 +54,7 @@ const Budget = () => {
   const [inputs, setInputs] = useState({
     nome: '',
     email: '',
-    serviço: currency,
+    servico: currency,
     sobre: '',
   })
   const handleServerResponse = (ok, msg) => {
@@ -57,8 +65,10 @@ const Budget = () => {
         info: { error: false, msg: msg },
       })
       setInputs({
+        nome: '',
         email: '',
-        message: '',
+        servico: currency,
+        sobre: '',
       })
     } else {
       setStatus({
@@ -67,30 +77,29 @@ const Budget = () => {
     }
   }
   const handleOnChange = (e) => {
-    console.log('ta funcionando');
-    e.persist()
-    setInputs((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }))
-    setStatus({
-      submitted: false,
-      submitting: false,
-      info: { error: false, msg: null },
-    })
+        setInputs((prev) => ({
+          ...prev,
+          [e.target.id]: e.target.value,
+        }))
+        setStatus({
+          submitted: false,
+          submitting: false,
+          info: { error: false, msg: null },
+        })
   }
+
   const handleOnSubmit = (e) => {
     e.preventDefault()
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }))
     axios({
       method: 'POST',
-      url: '',
+      url: 'https://formspree.io/f/mpzoowdr',
       data: inputs,
     })
       .then((response) => {
         handleServerResponse(
           true,
-          'Thank you, your message has been submitted.'
+          'Obrigado! Em poucos dias entrarei em contato.'
         )
       })
       .catch((error) => {
@@ -109,11 +118,12 @@ const Budget = () => {
 
       <ThemeProvider theme={theme}>
 
-        <TextField type="text" fullWidth onChange={handleOnChange} value={inputs.nome} size="small" label="Nome" variant="outlined" />
+        <TextField type="text" id="nome" fullWidth onChange={handleOnChange} value={inputs.nome} size="small" label="Nome" variant="outlined" />
 
-        <TextField onChange={handleOnChange} value={inputs.email} fullWidth type="email" size="small" label="E-mail" variant="outlined" />
+        <TextField id="email" onChange={handleOnChange} value={inputs.email} fullWidth type="text" size="small" label="E-mail" variant="outlined" />
 
-        <TextField 
+        <TextField
+          id="servico" 
           select
           fullWidth
           size="small" 
@@ -128,7 +138,7 @@ const Budget = () => {
           ))}
         </TextField>
 
-        <TextField multiline size="small" onChange={handleOnChange} value={inputs.sobre} fullWidth label="Digite sobre o projeto" variant="outlined" />
+        <TextField id="sobre" multiline size="small" onChange={handleOnChange} value={inputs.sobre} fullWidth label="Digite sobre o projeto" variant="outlined" />
       </ThemeProvider>
 
       <button type="submit" disabled={status.submitting}>
