@@ -8,7 +8,6 @@ import { Container } from './styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const Budget = () => {
-
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -39,6 +38,7 @@ const Budget = () => {
       ...prev,
       servico: e.target.value,
     }))
+
     setStatus({
       submitted: false,
       submitting: false,
@@ -51,12 +51,14 @@ const Budget = () => {
     submitting: false,
     info: { error: false, msg: null },
   })
+
   const [inputs, setInputs] = useState({
     nome: '',
     email: '',
     servico: currency,
     sobre: '',
   })
+
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
@@ -64,6 +66,7 @@ const Budget = () => {
         submitting: false,
         info: { error: false, msg: msg },
       })
+
       setInputs({
         nome: '',
         email: '',
@@ -81,6 +84,7 @@ const Budget = () => {
           ...prev,
           [e.target.id]: e.target.value,
         }))
+
         setStatus({
           submitted: false,
           submitting: false,
@@ -90,7 +94,9 @@ const Budget = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
+
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }))
+
     axios({
       method: 'POST',
       url: 'https://formspree.io/f/mpzoowdr',
@@ -113,7 +119,9 @@ const Budget = () => {
        <h1>serviços</h1>
 
        <form onSubmit={handleOnSubmit}>
+
          <h2>pedido de orçamento</h2>
+
          <h3>todos os campos são obrigatórios</h3>
 
       <ThemeProvider theme={theme}>
@@ -139,6 +147,7 @@ const Budget = () => {
         </TextField>
 
         <TextField id="sobre" multiline size="small" onChange={handleOnChange} value={inputs.sobre} fullWidth label="Digite sobre o projeto" variant="outlined" />
+      
       </ThemeProvider>
 
       <button type="submit" disabled={status.submitting}>
@@ -148,10 +157,10 @@ const Budget = () => {
                 : 'enviado!'
               : 'enviando...'}
       </button>
-      {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
-      )}
-      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+        {status.info.error && (
+          <div className="error">Error: {status.info.msg}</div>
+        )}
+        {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
       </form>
     </Container>
   );
