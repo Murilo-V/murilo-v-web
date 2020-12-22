@@ -154,8 +154,8 @@ const Budget = () => {
         {!status.submitting
               ? !status.submitted
                 ? 'enviar'
-                : 'enviado!'
-              : 'enviando...'}
+                : 'pronto!'
+              : 'carregando...'}
       </button>
         {status.info.error && (
           <div className="error">Error: {status.info.msg}</div>

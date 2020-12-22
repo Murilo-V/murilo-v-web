@@ -4,9 +4,15 @@ import SvgMenuCursor from '../../../assets/menu-cursor.svg';
 
 export const Container = styled.div`
 @media screen and (max-width:1024px) {
-        h1 {
+    h1 {
             font-size: 32pt !important;
             padding-top: 65px !important;
+        }
+
+        form {
+            width: 90vw !important;
+            margin-left: 5vw !important;
+            margin-right: 5vw !important;
         }
      }
 
