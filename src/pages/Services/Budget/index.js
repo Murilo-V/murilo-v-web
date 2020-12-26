@@ -160,7 +160,7 @@ const Budget = () => {
         {status.info.error && (
           <div className="error">Error: {status.info.msg}</div>
         )}
-        {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+        {!status.info.error && status.info.msg && <p classname="ok">{status.info.msg}</p>}
       </form>
     </Container>
   );

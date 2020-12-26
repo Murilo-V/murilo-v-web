@@ -41,7 +41,7 @@ const Menu = () => {
         animate={isOpen ? "open" : "closed"}
         variants={variants}>
           
-          <video muted autoPlay loop>
+          <video muted autoPlay loop controlsList="nodownload">
             <source src={MP4MenuVideo} type="video/mp4"/>
           </video>
 
