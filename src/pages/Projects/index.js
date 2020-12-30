@@ -12,9 +12,11 @@ const Projects = () => {
       <h1>projetos</h1>
 
       <div className="projects-container">
-           <div>
-             <img src={SvgMaduOutfitLogo} alt="MaduOutfit Logo" /> 
-            </div>
+        <a href="https://maduoutfit.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <div>
+            <img src={SvgMaduOutfitLogo} alt="MaduOutfit Logo" /> 
+          </div>
+        </a>
 
         <a href="https://happynextlevelweek.netlify.app/" target="_blank" rel="noopener noreferrer">
           <div> 
