@@ -76,7 +76,12 @@ export const Container = styled.div`
                 justify-content: center;
                 flex-direction: column;
                 margin: 30px;
+                transition: 400ms;
                 cursor: url(${SvgGreenLinkCursor}), default;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
 
                 img {
                     max-width: 70px;
